@@ -7,17 +7,13 @@ for l in content:
     first.append(int(l.strip().split()[0]))
     second.append(int(l.strip().split()[1]))
 
-first.sort()
-second.sort()
-
-distances = [abs(y - x) for x, y in zip(first, second)]
+distances = [abs(y - x) for x, y in zip(sorted(first), sorted(second))]
 p1 = sum(distances)
 print(p1)
 
 p2 = 0
 for i in first:
     p2 += second.count(i) * i
-
 print(p2)
 
 
