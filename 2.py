@@ -21,20 +21,12 @@ def is_safe(r):
 p1 = 0
 p2 = 0
 
-
-
-with open('inputs/2.in') as f:
-    for l in f.readlines():
-        r = [int(x) for x in l.strip().split()]
-        if is_safe(r):
-            p1 += 1
-
-
 with open('inputs/2.in') as f:
     for l in f.readlines():
         r = [int(x) for x in l.strip().split()]
         i = 0
         if is_safe(r):
+            p1 += 1
             p2 += 1
         else:
             while i < len(r):
