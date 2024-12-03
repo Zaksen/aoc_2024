@@ -1,9 +1,5 @@
 def same_direction(r):
-    direction = r[0] - r[1]
-    if direction > 0:
-        return r == sorted(r, reverse=True)
-    else:
-        return r == sorted(r)
+        return (r == sorted(r, reverse=True) or r == sorted(r))
 
 def adjacent(r):
     i = 0
