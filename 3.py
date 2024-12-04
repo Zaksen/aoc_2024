@@ -9,7 +9,6 @@ matches = re.findall(pattern, mystring)
 p1 = 0
 p2 = 0
 mul = True
-
 for m in matches:
     if m == 'do()':
         mul = True
