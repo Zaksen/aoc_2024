@@ -1,15 +1,6 @@
 with open('inputs/4.in') as f:
     grid = [l.strip() for l in f.readlines()]
 
-def is_xmas(s):
-    if s == 'XMAS' or s == 'SAMX':
-        return True
-    else:
-        return False
-
-print(grid)
-
-
 def is_in_grid(i, j):
     if 0 <= i <= len(grid)-1 and 0 <= j <= len(grid[0]) - 1:
         return True
@@ -20,7 +11,6 @@ def diagonal(i, j):
     x = ''
     if is_in_grid(i+3, j+3):
         for n in range(4):
-            print(i+n, j+n)
             x += grid[i+n][j+n]
     return x
 
@@ -40,7 +30,7 @@ def horizontal(i, j):
 
 def vertical(i, j):
     x = ''
-    if is_in_grid(i+4, j):
+    if is_in_grid(i+3, j):
         for n in range(4):
             x += grid[i+n][j]
     return x
@@ -63,4 +53,5 @@ for i in range(len(grid)):
         if horizontal(i, j) == 'XMAS' or horizontal(i, j) == 'SAMX':
             h_count += 1
 
-print(d_count, a_count, h_count, v_count)
+p1 = d_count + a_count + h_count + v_count
+print(p1)
