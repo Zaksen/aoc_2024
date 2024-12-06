@@ -45,12 +45,16 @@ for i in range(len(grid)):
    for j in range(len(grid[0])):
         x = grid[i][j]
         if diagonal(i, j) == 'XMAS' or diagonal(i, j) == 'SAMX':
+            print(diagonal(i, j))
             d_count+=1
         if anti_diagonal(i, j) == 'XMAS' or anti_diagonal(i, j) == 'SAMX':
+            print(anti_diagonal(i, j))
             a_count += 1
         if vertical(i, j) == 'XMAS' or vertical(i, j) == 'SAMX':
+            print(vertical(i, j))
             v_count += 1
         if horizontal(i, j) == 'XMAS' or horizontal(i, j) == 'SAMX':
+            print(horizontal(i, j))
             h_count += 1
 
 p1 = d_count + a_count + h_count + v_count
