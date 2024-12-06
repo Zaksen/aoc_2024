@@ -3,6 +3,13 @@ with open('inputs/6.in') as f:
 
 covered = set()
 
+directions = {
+    '^' : (0,-1),
+    '>' : (1,0),    
+    'v' : (0,1),    
+    '<' : (-1,0),    
+}
+
 max_x = len(grid) - 1
 max_y = len(grid[0]) - 1
 
@@ -14,6 +21,12 @@ for i in range(max_x):
             break
 
 in_grid = True
-while in_grid:
-    pass
 
+while in_grid:
+    dir = "^"
+    p = starting_position
+    print(starting_position)
+    x = p[0] + directions[dir][0]
+    y = p[1] + directions[dir][1]
+    if grid[x, y] == '#':
+        dir
