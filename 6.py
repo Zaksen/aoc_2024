@@ -1,8 +1,6 @@
 with open('inputs/6.in') as f:
     grid = [list(r.strip()) for r in f.readlines()]
 
-
-
 max_x = len(grid) - 1
 max_y = len(grid[0]) - 1
 for i in range(max_x):
@@ -32,3 +30,5 @@ def go(grid, starting_position):
 
     return len(covered)
         
+
+print(go(grid, starting_position))
